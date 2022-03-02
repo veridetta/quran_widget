@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.QuranWidget.AppWidgetContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/bg_rounded_top"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="@dimen/_6sdp"
+            android:text="Quran Widget Reminder"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_bottom"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_6sdp">
+            <TextView
+                android:id="@+id/tvArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_margin="5dp"
+                android:text="بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvSUraArab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(الفاتحة 1 : 1)"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tvTerjemahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvArabic"
+                android:layout_margin="5dp"
+                android:text="Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang."
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvSuraIndo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(Al-Fatihah 1 : 1 )"
+                android:textIsSelectable="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_6sdp">
+                    <LinearLayout
+                        android:id="@+id/update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:backgroundTint="@color/grey_100"
+                        android:background="@drawable/bg_rounded"
+                        android:padding="@dimen/_6sdp"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:background="@drawable/update"
+                            android:layout_marginRight="@dimen/_6sdp"/>
+                        <TextView
+                            android:id="@+id/tvLain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ayat Lainnya"
+                            android:textIsSelectable="true"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/share"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:backgroundTint="@color/grey_100"
+                        android:background="@drawable/bg_rounded"
+                        android:padding="@dimen/_6sdp"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:background="@drawable/share"
+                            android:layout_marginRight="@dimen/_6sdp"/>
+                        <TextView
+                            android:id="@+id/tvBagikan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagikan"
+                            android:textIsSelectable="true"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:backgroundTint="@color/grey_100"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="@dimen/_6sdp"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:background="@drawable/baca"
+                        android:layout_marginRight="@dimen/_6sdp"/>
+                    <TextView
+                        android:id="@+id/tvAplikasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buka di Aplikasi"
+                        android:textIsSelectable="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
